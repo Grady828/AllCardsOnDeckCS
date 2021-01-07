@@ -7,7 +7,7 @@ namespace AllCardsOnDeckCS
 {
     class Program
     {
-        private static int numberOfCards;
+
 
         static void Main(string[] args)
         {
@@ -25,13 +25,22 @@ namespace AllCardsOnDeckCS
                 var leftCard = cardDeckList[leftIndex];
                 cardDeckList[rightIndex] = leftCard;
                 cardDeckList[leftIndex] = rightCard;
+
             }
+
+            var newCardList = new List<string>();
             foreach (var Cards in cardDeckList)
             {
-                Console.WriteLine($"{Cards} ");
-
+                newCardList.Add(Cards);
             }
 
+            var firstCard = newCardList[0];
+            var secondCard = newCardList[1];
+
+            Console.WriteLine(firstCard);
+            Console.WriteLine(secondCard);
+
         }
+
     }
 }
